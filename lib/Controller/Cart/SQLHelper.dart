@@ -16,7 +16,7 @@ class Note extends ChangeNotifier {
   static Database? _db;
   List<Home> list = [];
   Map<String, dynamic>? Data;
-  int price=0;
+  num price=0;
   Note()
   {
     price;
@@ -96,7 +96,7 @@ class Note extends ChangeNotifier {
     }
     for(int i=0;i<list.length;i++)
       {
-        price +=int.parse(list[i].price);
+        price +=num.parse(list[i].price);
       }
     notifyListeners();
   }
